@@ -1,36 +1,54 @@
-# Harbor Heat
+# Neon Tide
 
-A top-down open-city crime game set in Port Cassidy, a harbor town ten blocks wide and ten blocks deep. It runs in the browser as a single HTML file and needs no build step or dependencies.
+An open-world crime game in 3D, set in Palmera Bay, a fictional 1980s coastal city. It runs in the browser from a single HTML file, using Three.js r128 loaded from cdnjs. There is no build step.
+
+Danny Reyes is out after eight years inside. Lucía Marquez, owner of Club Paloma, wants the coast back from the Calloway brothers. Nine story missions take Danny from the bus depot to the top of the city.
 
 ## Play
 
-Open `index.html` in any modern browser. You can also serve the folder, for example with `python3 -m http.server`, and visit `http://localhost:8000`.
+Open `index.html` in a modern browser with WebGL. You need an internet connection the first time so Three.js and the fonts can load. You can also serve the folder with `python3 -m http.server` and visit `http://localhost:8000`.
 
 ## Controls
 
 | Key | Action |
 | --- | --- |
-| WASD / arrows | Walk, or drive (W gas, S brake/reverse, A/D steer) |
-| Mouse + click | Aim and shoot |
-| E (or F / Enter) | Get into or out of a car. Drivers get pulled out. |
-| Space | Handbrake (drift) |
+| WASD | Walk (relative to the camera) or drive |
+| Mouse | Look around. Click once to lock the mouse. |
+| Click | Shoot. Auto-aims at whoever is near the crosshair. Works from cars too. |
+| E | Get into or out of a car. Drivers get pulled out. |
+| Space | Handbrake, or skip a line of dialogue |
 | Shift | Sprint |
-| Q, 1-3, mouse wheel | Switch weapon (Pistol, SMG, Shotgun) |
+| Q, 1-4, wheel | Pistol, SMG, Shotgun, Rifle |
+| R | Change radio station while driving |
 | H | Horn |
-| P / Esc | Pause |
+| P / Esc | Pause and stats |
 | M | Mute |
 
-On a touchscreen you get a virtual stick plus FIRE, CAR, BRAKE and GUN buttons, and aiming is automatic.
+Touch screens get a move stick on the left, a look area on the right, and FIRE, CAR, BRAKE, GUN and radio buttons.
 
-## What's in the city
+## Story missions
 
-- **Traffic and pedestrians.** AI cars keep to the right-hand lane and turn at intersections. Pedestrians walk the sidewalks and scatter when there's gunfire.
-- **Car physics.** Each car has grip and drift, takes damage from crashes, smokes when hurt, then catches fire and explodes. There are seven car models.
-- **Wanted level (five stars).** Crimes raise your heat. Patrol cruisers chase and ram you, and officers get out on foot to arrest you. At higher levels they shoot, and tactical vans join in. If you stay out of sight, the stars fade.
-- **Jobs from the payphones (☎).** There are four kinds: courier runs against the clock, stealing a gold sports car and delivering it to the Dock Garage, a hit on a guarded target, and checkpoint races.
-- **Spray & Pray.** Drive in while wanted and $250 buys a respray that clears your stars.
-- **Pickups.** Cash, health, armor, SMG and shotgun ammo.
-- **Day and night.** A full cycle takes about seven minutes, with headlights, streetlights and lit windows after dark.
-- **Hospital and precinct.** If you go down, you wake up at St. Brigid's. If you're arrested, you're released from Precinct 9. Either way you lose 10% of your cash, and an arrest also costs you your weapons.
+1. **Home Sweet Palmera.** Get a car and meet Lucía at Club Paloma.
+2. **Benny's Wishlist.** Steal a red Vanta GT for Benny's Garage. Damage cuts your pay.
+3. **Boardwalk Pickup.** Grab a package from the lifeguard tower, then lose the police.
+4. **Collections.** Visit three shops against the clock, then deal with the ambush.
+5. **Special Delivery.** Chase and destroy a Calloway cash van.
+6. **Midnight Grand Prix.** A street race against three rivals with a countdown and positions.
+7. **Beach Bash.** Clear two waves of Calloway gunmen off the sand.
+8. **Safe Passage.** Drive Hector in an armored sedan while gang cars chase you.
+9. **Neon Tide.** Storm the Calloway mansion, kill Victor, escape four stars, and watch the credits.
 
-Your money and completed jobs are saved in the browser's local storage.
+Pink **L** markers start story missions, and the **B** marker means Benny has work.
+
+## Also in the city
+
+- **Side jobs** from payphones ☎, unlocked after mission 2: courier runs, car boosts, hits and sprints.
+- **25 lost tapes** hidden around the map. Finding all of them pays a bonus.
+- **Bullseye Guns.** Walk into a price tag to buy an SMG, shotgun, rifle or armor.
+- **Spray & Pray.** A $250 respray clears your wanted level.
+- **Five-star wanted system.** Cruisers ram you and officers arrest you on foot. At higher levels they shoot, tactical vans join, and a helicopter with a searchlight turns up at four stars.
+- **Three radio stations**, generated live: WAVE 103 (synth pop), PALM 88.5 (late night soul) and KRANK 107 (heavy metal).
+- **City.** Downtown towers, art-deco beachfront hotels with neon, a beach with palms and umbrellas, docks with a freighter, and a day/night cycle that takes about 12 minutes.
+- **Saving.** Progress, money, weapons and tapes save to the browser automatically. Continue from the title screen.
+
+The earlier top-down prototype is kept as `harbor-heat-2d.html`.
